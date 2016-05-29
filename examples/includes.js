@@ -1,7 +1,7 @@
 import test from 'ava';
 import curry from './partial-apply';
 
-const includes = curry((a, ...args) => args.every((arg) => a.indexOf(arg) > -1 === true));
+const includes = curry((a, ...args) => args.every((arg) => a.indexOf(arg) > -1));
 
 test('single param includes', t => {
 	const array = [1, 2, 3];
@@ -18,7 +18,7 @@ test('multiple param includes', t => {
 // Array.prototype
 
 Array.prototype.includes = function(...args) {
-	return args.every((arg) => this.indexOf(arg) > -1 === true);
+	return args.every((arg) => this.indexOf(arg) > -1);
 }
 
 test('single param includes', t => {
