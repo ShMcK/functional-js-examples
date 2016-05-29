@@ -40,6 +40,14 @@ Array.prototype.includes = function(...args) {
 }
 ```
 
+* y-combinator
+
+Not sure why you would want this in JavaScript, but just for fun.
+
+```js
+const y = (g => f => f(f))(f => g => x => f(f)(x));
+```
+
 * [or](./examples/or.js)
 
 ```js
