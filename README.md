@@ -40,9 +40,29 @@ Array.prototype.includes = function(...args) {
 }
 ```
 
+* [first]('./examples/first-last.js')
+
+```js
+const first = a => a[0];
+
+Array.prototype.first = function() {
+	return this[0];
+}
+```
+
+* [last]('./examples/first-last.js')
+
+```js
+const last = a => a[a.length - 1];
+
+Array.prototype.last = function() {
+	return this[this.length - 1];
+}
+```
+
 * y-combinator
 
-Not sure why you would want this in JavaScript, but just for fun.
+**Not sure why you would want this in JavaScript, but just for fun.**
 
 ```js
 const y = (g => f => f(f))(f => g => x => f(f)(x));
