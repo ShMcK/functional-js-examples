@@ -36,3 +36,13 @@ Boolean.prototype.or = function(...args) {
 	return this || args.every(arg => arg === true);
 }
 ```
+
+* [and](./examples/and.js)
+
+```js
+const and = curry((a, ...args) => a && args.every((arg) => arg === true));
+
+Boolean.prototype.and = function(...args) {
+	return this && args.every(arg => arg === true);
+}
+```
