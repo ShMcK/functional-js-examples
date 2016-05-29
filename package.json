@@ -1,0 +1,26 @@
+{
+  "name": "javascript-functional-programming",
+  "version": "0.1.0",
+  "description": "functional programming concept practice with examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "keywords": [
+    "functional",
+    "functional",
+    "programming",
+    "fp",
+    "es2015"
+  ],
+  "author": "Shawn McKay <shawn.j.mckay@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.15.1"
+  },
+  "ava": {
+    "files": [
+      "*.js"
+    ]
+  }
+}
