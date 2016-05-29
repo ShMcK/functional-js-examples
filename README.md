@@ -27,6 +27,19 @@ Function.prototype.compose = function(f) {
 }
 ```
 
+* [includes]('./examples/includes.js')
+
+```js
+const includes = curry(
+	(a, ...args) => args.every((arg) => a.indexOf(arg) > -1 === true)
+);
+
+// coming with ES2017 ?
+Array.prototype.includes = function(...args) {
+	return args.every((arg) => this.indexOf(arg) > -1 === true);
+}
+```
+
 * [or](./examples/or.js)
 
 ```js
