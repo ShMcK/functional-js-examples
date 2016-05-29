@@ -31,19 +31,19 @@ Function.prototype.compose = function(f) {
 
 ```js
 const includes = curry(
-	(a, ...args) => args.every((arg) => a.indexOf(arg) > -1 === true)
+	(a, ...args) => args.every((arg) => a.indexOf(arg) > -1)
 );
 
 // coming with ES2017 ?
 Array.prototype.includes = function(...args) {
-	return args.every((arg) => this.indexOf(arg) > -1 === true);
+	return args.every((arg) => this.indexOf(arg) > -1);
 }
 ```
 
 * [or](./examples/or.js)
 
 ```js
-const or = curry((a, ...args) => a || args.every((arg) => arg === true));
+const or = curry((a, ...args) => a || args.every((arg) => arg));
 
 Boolean.prototype.or = function(...args) {
 	return this || args.every(arg => arg === true);
