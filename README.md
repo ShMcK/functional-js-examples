@@ -7,10 +7,10 @@
 ## Content
 
 
-* [curry & partial application](./partial-apply.js)
+* [curry & partial application](./examples/partial-apply.js)
 
 `const curry = (f, ...args1) => (...args2) => f(...args1, ...args2);`
 
-* [compose](./compose.js)
+* [compose](./examples/compose.js)
 
 `const compose = (...args) => x => args.reduceRight((result, f) => f(result), x);`
