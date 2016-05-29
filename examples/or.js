@@ -2,7 +2,7 @@ import test from 'ava';
 import curry from './partial-apply';
 
 // Returns true if one or both of its arguments are true. Returns false if both arguments are false.
-const or = curry((a, ...args) => a || args.every((arg) => arg === true));
+const or = curry((a, ...args) => a || args.every((arg) => !!arg));
 
 test(t => {
 	t.is(or(true, true), true);
@@ -19,7 +19,7 @@ test(t => {
 // Boolean.prototype
 
 Boolean.prototype.or = function(...args) {
-	return this || args.every(arg => arg === true);
+	return this || args.every(arg => !!arg);
 }
 
 test(t => {

@@ -43,19 +43,19 @@ Array.prototype.includes = function(...args) {
 * [or](./examples/or.js)
 
 ```js
-const or = curry((a, ...args) => a || args.every((arg) => arg));
+const or = curry((a, ...args) => a || args.every((arg) => !!arg));
 
 Boolean.prototype.or = function(...args) {
-	return this || args.every(arg => arg === true);
+	return this || args.every(arg => !!arg);
 }
 ```
 
 * [and](./examples/and.js)
 
 ```js
-const and = curry((a, ...args) => a && args.every((arg) => arg === true));
+const and = curry((a, ...args) => a && args.every((arg) => !!arg));
 
 Boolean.prototype.and = function(...args) {
-	return this && args.every(arg => arg === true);
+	return this && args.every(arg => !!arg);
 }
 ```
