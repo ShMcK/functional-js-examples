@@ -17,3 +17,18 @@ test(t => {
 	const multiply5Add2 = compose(multiply5, add2);
 	t.is(multiply5Add2(3), 25);
 });
+
+// Function prototype compose
+
+Function.prototype.compose = function(f) {
+	return (...args) => this.call(this, f.apply(this, args));
+}
+
+
+test('Function prototype compose', t => {
+	t.is(add2.compose(multiply5)(3), 17);
+});
+
+test(t => {
+	t.is(multiply5.compose(add2)(3), 25);
+})
