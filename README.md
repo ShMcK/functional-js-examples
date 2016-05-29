@@ -30,7 +30,7 @@ Function.prototype.compose = function(f) {
 * [or](./examples/or.js)
 
 ```js
-const or = curry((a, b) => a || b);
+const or = curry((a, ...args) => a || args.every((arg) => arg === true));
 
 Boolean.prototype.or = function(...args) {
 	return this || args.every(arg => arg === true);
