@@ -26,3 +26,13 @@ Function.prototype.compose = function(f) {
 	return (...args) => this.call(this, f.apply(this, args));
 }
 ```
+
+* [or](./examples/or.js)
+
+```js
+const or = curry((a, b) => a || b);
+
+Boolean.prototype.or = function(...args) {
+	return this || args.every(arg => arg === true);
+}
+```

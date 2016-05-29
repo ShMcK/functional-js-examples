@@ -33,3 +33,5 @@ test(t => {
 	const sumMany = sum.curry(1, 2, 3);
 	t.is(sumMany(4), 10);
 });
+
+export default curry;

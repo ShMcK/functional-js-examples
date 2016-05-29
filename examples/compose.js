@@ -31,4 +31,6 @@ test('Function prototype compose', t => {
 
 test(t => {
 	t.is(multiply5.compose(add2)(3), 25);
-})
+});
+
+export default compose;
