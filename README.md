@@ -13,4 +13,4 @@
 
 * [compose](./compose.js)
 
-`const compose = (...args) => args.reduceRight((x, f) => f(x));`
+`const compose = (...args) => x => args.reduceRight((result, f) => f(result), x);`
