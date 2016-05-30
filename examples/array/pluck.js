@@ -1,6 +1,6 @@
 import test from 'ava';
-import curry from './curry';
-import prop from './prop';
+import curry from '../composition/curry';
+import prop from '../composition/prop';
 
 const pluck = curry((p, list) => list.map(prop(p)));
 

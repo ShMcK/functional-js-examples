@@ -1,5 +1,5 @@
 import test from 'ava';
-import curry from './curry';
+import curry from '../composition/curry';
 
 const includes = curry((a, ...args) => args.every((arg) => a.indexOf(arg) > -1));
 

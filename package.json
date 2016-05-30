@@ -23,7 +23,7 @@
   },
   "ava": {
     "files": [
-      "examples/*.js"
+      "examples/**/*.js"
     ],
     "require": [
       "babel-register"
