@@ -20,16 +20,6 @@ Function.prototype.compose = function(f) {
 }
 ```
 
-* [prop](./examples/prop.js)
-
-```js
-const prop = curry(p => obj => obj[p]);
-
-Object.prototype.prop = Array.prototype.prop = function(p) {
-	return this[p];
-}
-```
-
 * y-combinator
 
 *Not sure why you would want this in JavaScript, but just for fun.*

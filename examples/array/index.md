@@ -13,7 +13,17 @@ Array.prototype.includes = function(...args) {
 }
 ```
 
-* [pluck]('./examples/array/pluck')
+* [prop](./examples/prop.js)
+
+```js
+const prop = curry(p => obj => obj[p]);
+
+Object.prototype.prop = Array.prototype.prop = function(p) {
+	return this[p];
+}
+```
+
+* [pluck]('./examples/array/pluck.js')
 
 ```js
 const pluck = curry((p, list) => list.map(prop(p)));

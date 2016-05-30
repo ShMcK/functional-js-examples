@@ -1,8 +1,6 @@
 import test from 'ava';
 
-export default function isFunction(a) {
-	return typeof a === 'function';
-}
+const isFunction = a => typeof a === 'function';
 
 test(t => {
 	t.is(isFunction(function() {}), true);
@@ -10,3 +8,5 @@ test(t => {
 		a: 1
 	}), false);
 });
+
+export default isFunction;

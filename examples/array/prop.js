@@ -1,5 +1,5 @@
 import test from 'ava';
-import curry from './curry';
+import curry from '../composition/curry';
 
 const prop = curry(p => obj => obj[p]);
 

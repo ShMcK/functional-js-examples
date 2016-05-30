@@ -1,6 +1,6 @@
 # Conditions
 
-* [cond]('./examples/conditions/cond')
+* [cond]('./examples/conditions/cond.js')
 
 ```js
 const cond = (...args) => args.reduce((t, a) => {
