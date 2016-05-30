@@ -1,3 +1,5 @@
+import test from 'ava';
+
 const last = a => a[a.length - 1];
 
 test(t => {

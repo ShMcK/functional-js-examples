@@ -1,5 +1,5 @@
 import test from 'ava';
-import curry from './partial-apply';
+import curry from './curry';
 
 // Returns true if one or both of its arguments are true. Returns false if both arguments are false.
 const or = curry((a, ...args) => a || args.every((arg) => !!arg));

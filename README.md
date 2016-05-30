@@ -8,7 +8,7 @@ Simplified functional programming with ES2015.
 
 ## Functions
 
-* [curry & partial application](./examples/partial-apply.js)
+* [curry & partial application](./examples/curry.js)
 
 ```js
 const curry = (f, ...args1) => (...args2) => f(...args1, ...args2);
@@ -81,6 +81,26 @@ const or = curry((a, ...args) => a || args.every((arg) => !!arg));
 
 ```js
 const and = curry((a, ...args) => a && args.every((arg) => !!arg));
+```
+
+* [prop](./examples/prop.js)
+
+```js
+const prop = curry(p => obj => obj[p]);
+
+Object.prototype.prop = Array.prototype.prop = function(p) {
+	return this[p];
+}
+```
+
+* [pluck]('./examples/pluck')
+
+```js
+const pluck = curry((p, list) => list.map(prop(p)));
+
+Array.prototype.pluck = function(p) {
+	return this.map(prop(p));
+}
 ```
 
 * y-combinator
