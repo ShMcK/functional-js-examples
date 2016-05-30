@@ -12,3 +12,4 @@ Simplified functional programming with ES2015.
 * [Conditions](examples/conditions/index.md)
 * [Composition](examples/composition/index.md)
 * [Checks](examples/checks/index.md)
+* [Functors](examples/functors/index.md)
