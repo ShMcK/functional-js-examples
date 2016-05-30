@@ -8,7 +8,7 @@ Simplified functional programming with ES2015.
 
 ## Index
 
-* [Array Methods]('./examples/array/index.md')
-* [Conditions]('./examples/conditions/index.md')
-* [Composition]('./examples/composition/index.md')
-* [Type Checking]('./examples/types/index.md')
+* [Array Methods](examples/array/index.md)
+* [Conditions](examples/conditions/index.md)
+* [Composition](examples/composition/index.md)
+* [Type Checking](examples/types/index.md)
