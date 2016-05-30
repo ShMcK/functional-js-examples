@@ -1,8 +1,6 @@
 import test from 'ava';
 
-export default function isArray(a) {
-	return Array.isArray(a);
-}
+const isArray = a => Array.isArray(a);
 
 test(t => {
 	t.is(isArray([]), true);
@@ -10,3 +8,5 @@ test(t => {
 		a: 1
 	}), false);
 });
+
+export default isArray;
