@@ -3,11 +3,10 @@
 * [cond](./cond.js)
 
 ```js
-const cond = (...args) => args.reduce((t, a) => {
-	if (a[0]) {
-		return a[1];
-	}
-}, null);
+const cond = (...args) => {
+	const r = args.find((a) => a[0]);
+	return r && r.length > 1 ? r[1] : r;
+}
 ```
 
 * [or](./or.js)

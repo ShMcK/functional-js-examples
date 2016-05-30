@@ -2,11 +2,12 @@ import test from 'ava';
 import and from './and';
 import or from './or';
 
-const cond = (...args) => args.reduce((t, a) => {
-	if (a[0]) {
-		return a[1];
-	}
-}, null);
+const cond = (...args) => {
+	const r = args.find((a) => a[0]);
+	return r && r.length > 1 ? r[1] : r;
+}
+
+export default cond;
 
 test(t => {
 	t.is(cond([true, 42]), 42);
@@ -18,6 +19,10 @@ test(t => {
 
 test(t => {
 	t.is(cond([false, 42]), undefined);
+});
+
+test(t => {
+	t.is(cond([false, 1], [true, 2], [false, 3], [true, 4]), 2);
 });
 
 test(t => {
