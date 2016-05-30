@@ -31,3 +31,5 @@ test(t => {
 	t.is(true.or(true, true, false), true);
 	t.is(false.or(false, false, false), false);
 });
+
+export default or;

@@ -1,11 +1,12 @@
 # JavaScript Functional Programming
 
+Simplified functional programming with ES2015.
+
 ## Setup
 
 `> npm i`
 
-## Content
-
+## Functions
 
 * [curry & partial application](./examples/partial-apply.js)
 
@@ -50,7 +51,7 @@ const cond = (...args) => args.reduce((t, a) => {
 }, null);
 ```
 
-* [first]('./examples/first-last.js')
+* [first]('./examples/first.js')
 
 ```js
 const first = a => a[0];
@@ -60,7 +61,7 @@ Array.prototype.first = function() {
 }
 ```
 
-* [last]('./examples/first-last.js')
+* [last]('./examples/last.js')
 
 ```js
 const last = a => a[a.length - 1];
@@ -70,30 +71,22 @@ Array.prototype.last = function() {
 }
 ```
 
-* y-combinator
-
-*Not sure why you would want this in JavaScript, but just for fun.*
-
-```js
-const y = (g => f => f(f))(f => g => x => f(f)(x));
-```
-
 * [or](./examples/or.js)
 
 ```js
 const or = curry((a, ...args) => a || args.every((arg) => !!arg));
-
-Boolean.prototype.or = function(...args) {
-	return this || args.every(arg => !!arg);
-}
 ```
 
 * [and](./examples/and.js)
 
 ```js
 const and = curry((a, ...args) => a && args.every((arg) => !!arg));
+```
 
-Boolean.prototype.and = function(...args) {
-	return this && args.every(arg => !!arg);
-}
+* y-combinator
+
+*Not sure why you would want this in JavaScript, but just for fun.*
+
+```js
+const y = (g => f => f(f))(f => g => x => f(f)(x));
 ```

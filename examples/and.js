@@ -33,3 +33,5 @@ test(t => {
 	t.is(true.and(true, true, false), false);
 	t.is(false.and(false, false, false), false);
 });
+
+export default and;
