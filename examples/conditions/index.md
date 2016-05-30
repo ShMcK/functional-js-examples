@@ -1,6 +1,6 @@
 # Conditions
 
-* [cond]('./examples/conditions/cond.js')
+* [cond](./cond.js)
 
 ```js
 const cond = (...args) => args.reduce((t, a) => {
@@ -10,13 +10,13 @@ const cond = (...args) => args.reduce((t, a) => {
 }, null);
 ```
 
-* [or](./examples/conditions/or.js)
+* [or](./or.js)
 
 ```js
 const or = curry((a, ...args) => a || args.every((arg) => !!arg));
 ```
 
-* [and](./examples/conditions/and.js)
+* [and](./and.js)
 
 ```js
 const and = curry((a, ...args) => a && args.every((arg) => !!arg));

@@ -1,6 +1,6 @@
 # Array Methods
 
-* [includes]('./examples/array/includes.js')
+* [includes](./includes.js)
 
 ```js
 const includes = curry(
@@ -13,7 +13,7 @@ Array.prototype.includes = function(...args) {
 }
 ```
 
-* [prop](./examples/prop.js)
+* [prop](./prop.js)
 
 ```js
 const prop = curry(p => obj => obj[p]);
@@ -23,7 +23,7 @@ Object.prototype.prop = Array.prototype.prop = function(p) {
 }
 ```
 
-* [pluck]('./examples/array/pluck.js')
+* [pluck](./pluck.js)
 
 ```js
 const pluck = curry((p, list) => list.map(prop(p)));
@@ -33,7 +33,7 @@ Array.prototype.pluck = function(p) {
 }
 ```
 
-* [first]('./examples/array/first.js')
+* [first](./first.js)
 
 ```js
 const first = a => a[0];
@@ -43,7 +43,7 @@ Array.prototype.first = function() {
 }
 ```
 
-* [last]('./examples/array/last.js')
+* [last](./last.js)
 
 ```js
 const last = a => a[a.length - 1];

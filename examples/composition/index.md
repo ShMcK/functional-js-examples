@@ -1,6 +1,6 @@
 # Composition
 
-* [curry & partial application](./examples/curry.js)
+* [curry & partial application](./curry.js)
 
 ```js
 const curry = (f, ...args1) => (...args2) => f(...args1, ...args2);
@@ -10,7 +10,7 @@ Function.prototype.curry = function(...args1) {
 }
 ```
 
-* [compose](./examples/compose.js)
+* [compose](./compose.js)
 
 ```js
 const compose = (...args) => x => args.reduceRight((result, f) => f(result), x);
